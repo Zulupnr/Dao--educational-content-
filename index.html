@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <button onclick="search()">Search</button>
+            <button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+            <button onclick="loginWithGoogle()">Login with Gmail</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Blog Section -->
+        <section id="blog-section">
+            <h2>Blogs</h2>
+            <article>
+                <h3>Sample Blog Post 1</h3>
+                <p>This is a sample blog post content.</p>
+            </article>
+            <article>
+                <h3>Sample Blog Post 2</h3>
+                <p>Another example of a blog post content.</p>
+            </article>
+        </section>
+
+        <!-- Photo Section (Display Only) -->
+        <section id="photo-section">
+            <h2>Photos</h2>
+            <img src="photo1.jpg" alt="Sample Photo 1">
+            <img src="photo2.jpg" alt="Sample Photo 2">
+        </section>
+
+        <!-- File Section (Downloadable Only) -->
+        <section id="file-section">
+            <h2>Files</h2>
+            <div>
+                <p>Sample File 1</p>
+                <a href="samplefile1.pdf" download>Download</a>
+            </div>
+            <div>
+                <p>Sample File 2</p>
+                <a href="samplefile2.pdf" download>Download</a>
+            </div>
+        </section>
+
+        <!-- Video Section with Quality Control -->
+        <section id="video-section">
+            <h2>Videos</h2>
+            <video id="video-player" controls>
+                <source src="sample_low.mp4" type="video/mp4" data-quality="low">
+                <source src="sample_high.mp4" type="video/mp4" data-quality="high">
+            </video>
+            <label for="quality">Quality:</label>
+            <select id="quality" onchange="changeQuality(this)">
+                <option value="low">Low</option>
+                <option value="high">High</option>
+            </select>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
